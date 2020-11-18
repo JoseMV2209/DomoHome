@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "166090424556",
+    "firebase_url": "https://domotica-4c703.firebaseio.com",
+    "project_id": "domotica-4c703",
+    "storage_bucket": "domotica-4c703.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:166090424556:android:3e61094a6015e56957a5c9",
+        "android_client_info": {
+          "package_name": "es.martis.DomoHome"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "166090424556-4b27cbugdlfpkqv0b1k8nq4e0megi0h5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJKWDQEYPTHKJUsOabk1VGNW0jeM7HtJI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "166090424556-4b27cbugdlfpkqv0b1k8nq4e0megi0h5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "166090424556-rpa8nuv996k6q3hpn97lug4cg9emcj8t.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.company.martis"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
