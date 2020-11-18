@@ -4,34 +4,29 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 class FirestoreDB {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 
-  FirestoreDB() {}
+  FirestoreDB();
 
   Stream<List<Todo>> getCollection(String nombreColl) {
     return _firestore
-      .collection(nombreColl)
-      .snapshots()
-      .map((QuerySnapshot query) {
-        List<Todo> todos = List();
+        .collection(nombreColl)
+        .snapshots()
+        .map((QuerySnapshot query) {
+      List<Todo> todos = List();
 
-        query.docs.forEach((element) {
-          todos.add(Todo.fromDocumentSnapshot(element));
-        });
-
-        return todos;
+      query.docs.forEach((element) {
+        todos.add(Todo.fromDocumentSnapshot(element));
       });
+
+      return todos;
+    });
   }
 
   Future<void> addTodo(String todo) async {
-
     try {
-
-      await _firestore
-          .collection('tareas')
-          .add({
-            'hecho' : false,
-            'what' : todo,
-          });
-
+      await _firestore.collection('tareas').add({
+        'hecho': false,
+        'what': todo,
+      });
     } catch (err) {
       print(err);
       rethrow;
@@ -39,14 +34,11 @@ class FirestoreDB {
   }
 
   Future<void> updateTodo(Todo todo, String campo, dynamic data) async {
-
     try {
-
       await _firestore
           .collection('tareas')
           .doc(todo.todoId)
-          .update({campo : data});
-
+          .update({campo: data});
     } catch (err) {
       print(err);
       rethrow;
