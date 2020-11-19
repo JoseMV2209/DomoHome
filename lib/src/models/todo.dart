@@ -11,9 +11,13 @@ class Todo {
     this.finished,
   ) {}
 
-  Todo.fromDocumentSnapshot(DocumentSnapshot documentSnapshot) {
-    this.todo = documentSnapshot.data()['what'];
-    this.todoId = documentSnapshot.id;
-    this.finished = documentSnapshot.data()['hecho'];
+  Todo.fromDocumentSnapshot(DocumentSnapshot doc) {
+    this.todo = doc.data()['what'];
+    this.todoId = doc.id;
+    this.finished = doc.data()['hecho'];
   }
+}
+
+List<Todo> toTodoList(QuerySnapshot query) {
+  return query.docs.map((doc) => Todo.fromDocumentSnapshot(doc)).toList();
 }

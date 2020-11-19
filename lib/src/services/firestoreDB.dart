@@ -10,15 +10,7 @@ class FirestoreDB {
     return _firestore
         .collection(nombreColl)
         .snapshots()
-        .map((QuerySnapshot query) {
-      List<Todo> todos = List();
-
-      query.docs.forEach((element) {
-        todos.add(Todo.fromDocumentSnapshot(element));
-      });
-
-      return todos;
-    });
+        .map(toTodoList);
   }
 
   Future<void> addTodo(String todo) async {
