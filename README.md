@@ -1,16 +1,25 @@
 # DomoHome
 
-A new Flutter project.
+Un nuevo proyecto Flutter.
 
-## Getting Started
+## Empezando
 
-This project is a starting point for a Flutter application.
+Este proyecto es un punto de partida para una aplicación Flutter.
 
-A few resources to get you started if this is your first Flutter project:
+Para podre visualizar en windows 10 el codigo correctamente tiene que hacer unos pasos previos:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+  - Tener instalado android Studio y tambien instalar Visual Studio Code.
+  - Introducir en las variables de entorno las siguientes carpetas:
+  
+    - Android\Sdk\emulator
+    - Android\Sdk\platform-tools
+    - Android\Sdk\tools
+    
+  - Tener instalado java jre y en las variables de entorno.
+  - Descargar e intalar Flutter desde su pagina oficial.
+  - Correr en una terminal el comando: flutter doctor
+  - Y seguir sus pasos
+  - Y por ultimo si no quiere conectar un dispositivo fisico al pc, tiene que instalar un emulador de android studio.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+YA esta todo listo para arrancar el proyecto y ver la obra maestra.
